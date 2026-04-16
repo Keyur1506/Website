@@ -3,77 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BharatBazaar - Premium UI</title>
+<title>BharatBazaar</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{
-  background: linear-gradient(135deg,#0f172a,#1e293b,#020617);
-  color:#ffffff;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
+body{
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #f97316 100%);
+  color: #ffffff;
+}*{
+  transition: all 0.25s ease;
+}
 /* NAVBAR */
 .navbar{
   display:flex;
   justify-content:space-between;
-  padding:20px 50px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+  padding:20px 40px;
 }
 
-.navbar h2{color:#ffd369;}
-
-.nav-links a{
-  margin-left:20px;
-  text-decoration:none;
-  color:white;
-}
-
-/* HERO */
-.hero{
-  text-align:center;
-  padding:80px 20px;
-}
-
-.hero h1{
-  font-size:42px;
-  margin-bottom:10px;
-}
-
-.hero span{
+.navbar h2{
   color:#ffd369;
 }
 
-.hero button{
-  margin-top:20px;
-  padding:12px 25px;
-  border:none;
-  border-radius:30px;
-  background:#ffd369;
-  color:black;
-  cursor:pointer;
-  font-weight:bold;
-}
-
-/* PRODUCTS */
+/* TITLE */
 .section-title{
   text-align:center;
-  margin:30px 0;
-  font-size:28px;
+  margin:25px 0;
 }
 
+/* PRODUCT GRID */
 .product-container{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  padding:0 40px;
+  gap:20px;
+  padding:30px;
 }
 
+/* CARD */
 .product-card{
-  background: rgba(255,255,255,0.07);
+  position:relative;
+  background:#1e293b;
   border-radius:15px;
   overflow:hidden;
   text-align:center;
@@ -86,44 +62,67 @@ body{
 
 .product-card img{
   width:100%;
-  height:200px;
+  height:180px;
   object-fit:cover;
 }
 
-.product-content{padding:15px;}
+/* BADGE */
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:red;
+  padding:5px 10px;
+  border-radius:10px;
+  font-size:12px;
+}
+
+/* CONTENT */
+.product-content{
+  padding:15px;
+}
+
+.rating{
+  color:#ffd369;
+  font-size:14px;
+}
 
 .price{
   color:#ffd369;
+  margin:8px 0;
   font-weight:bold;
-  margin:10px 0;
 }
 
+/* BUTTONS */
 .btn{
-  padding:8px 18px;
+  padding:8px 15px;
   border:none;
   border-radius:20px;
   background:#ffd369;
   cursor:pointer;
 }
 
+.cart-btn{
+  display:block;
+  width:100%;
+  margin-top:8px;
+  padding:10px;
+  border:none;
+  border-radius:20px;
+  background:#00c897;
+  color:white;
+}
+
+/* WHATSAPP */
 .whatsapp-btn{
   display:block;
-  margin-top:10px;
-  background:#25D366;
+  margin-top:8px;
   padding:8px;
-  border-radius:20px;
+  background:#25D366;
   color:white;
   text-decoration:none;
+  border-radius:20px;
 }
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  margin-top:40px;
-  background: rgba(255,255,255,0.05);
-}
-
 </style>
 </head>
 
@@ -131,86 +130,188 @@ footer{
 
 <div class="navbar">
   <h2>BharatBazaar</h2>
-  <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
-  </div>
 </div>
-
-<section class="hero">
-  <h1>Upgrade Your <span>Tech Style</span></h1>
-  <p>Modern gadgets with premium quality</p>
-  <button>Explore Now</button>
-</section>
 
 <h2 class="section-title">Trending Products</h2>
 
 <div class="product-container">
 
+<!-- IPHONE -->
 <div class="product-card">
-<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Headphones">
-<div class="product-content">
-<h3>RGB Headphones</h3>
-<span class="price">₹5,499</span>
-<button class="btn">Buy</button>
-<a class="whatsapp-btn" href="https://wa.me/918000747574">Order on WhatsApp</a>
-</div>
-</div>
-
-<div class="product-card">
-<img src="https://m.media-amazon.com/images/I/71PuVChUUIL._SL1500_.jpg">
-<div class="product-content">
-<h3>Keyboard Combo</h3>
-<span class="price">₹18,999</span>
-<button class="btn">Buy</button>
-<a class="whatsapp-btn" href="https://wa.me/918000747574">Order on WhatsApp</a>
-</div>
-</div>
-
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
-<div class="product-content">
-<h3>MacBook Air</h3>
-<span class="price">₹1,09,999</span>
-<button class="btn">Buy</button>
-<a class="whatsapp-btn" href="https://wa.me/918000747574">Order on WhatsApp</a>
-</div>
-</div>
-
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab">
+<span class="badge">25% OFF</span>
+<img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=500">
 <div class="product-content">
 <h3>iPhone</h3>
-<span class="price">₹1,49,999</span>
-<button class="btn">Buy</button>
-<a class="whatsapp-btn" href="https://wa.me/918000747574">Order on WhatsApp</a>
+<div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+<p class="price">₹149999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20iPhone%20₹149999">Order on WhatsApp</a>
 </div>
 </div>
 
+<!-- SAMSUNG -->
+<div class="product-card">
+<span class="badge">20% OFF</span>
+<img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500">
+<div class="product-content">
+<h3>Samsung Phone</h3>
+<div class="rating">⭐⭐⭐⭐☆ (4.6)</div>
+<p class="price">₹89999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Samsung%20Phone%20₹89999">Order on WhatsApp</a>
 </div>
-<!-- ORDER FORM -->
-<section style="padding:40px; max-width:600px; margin:40px auto; background:linear-gradient(135deg,#1e1b4b,#312e81); border-radius:12px; color:white; box-shadow:0 10px 30px rgba(0,0,0,0.2);">
-  <h2 style="text-align:center; margin-bottom:20px;">Place Your Order</h2>
+</div>
 
-  <form>
-    <input type="text" placeholder="Full Name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
+<!-- PERFUMES -->
+<div class="product-card">
+<span class="badge">30% OFF</span>
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=500" alt="Wireless Earbuds">
+<div class="product-content">
+<h3>Perfumes</h3>
+<div class="rating">⭐⭐⭐⭐☆ (4.4)</div>
+<p class="price">₹2999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Earbuds%20₹2999">Order on WhatsApp</a>
+</div>
+</div>
 
-    <input type="number" placeholder="Quantity" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
+<!-- TV -->
+<div class="product-card">
+<span class="badge">18% OFF</span>
+<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=500">
+<div class="product-content">
+<h3>Television</h3>
+<div class="rating">⭐⭐⭐⭐⭐ (4.7)</div>
+<p class="price">₹59999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Television%20₹59999">Order on WhatsApp</a>
+</div>
+</div>
 
-    <textarea placeholder="Address" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;"></textarea>
+<!-- SPEAKER -->
+<div class="product-card">
+<span class="badge">22% OFF</span>
+<img src="https://images.unsplash.com/photo-1589003077984-894e133dabab?w=500">
+<div class="product-content">
+<h3>Speaker</h3>
+<div class="rating">⭐⭐⭐⭐☆ (4.5)</div>
+<p class="price">₹4999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Speaker%20₹4999">Order on WhatsApp</a>
+</div>
+</div>
 
-    <input type="tel" placeholder="Phone Number" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:1px solid #ccc;">
+<!-- KEYBOARD -->
+<div class="product-card">
+<span class="badge">15% OFF</span>
+<img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500">
+<div class="product-content">
+<h3>Keyboard</h3>
+<div class="rating">⭐⭐⭐⭐☆ (4.3)</div>
+<p class="price">₹3999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Keyboard%20₹3999">Order on WhatsApp</a>
+</div>
+</div>
 
-    <button type="submit" style="width:100%; padding:12px; background:#25D366; border:none; border-radius:8px; color:white; font-weight:bold; cursor:pointer;">Submit Order</button>
-  </form>
-</section>
+<!-- MONITOR -->
+<div class="product-card">
+<span class="badge">12% OFF</span>
+<img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Desktop Monitor">
+<div class="product-content">
+<h3>Monitor</h3>
+<div class="rating">⭐⭐⭐⭐⭐ (4.6)</div>
+<p class="price">₹12999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Monitor%20₹12999">Order on WhatsApp</a>
+</div>
+</div>
+
+<!-- GAMING MOUSE -->
+<div class="product-card">
+<span class="badge">25% OFF</span>
+<img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500">
+<div class="product-content">
+<h3>Gaming Mouse</h3>
+<div class="rating">⭐⭐⭐⭐☆ (4.4)</div>
+<p class="price">₹1999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Gaming%20Mouse%20₹1999">Order on WhatsApp</a>
+</div>
+</div>
+
+<!-- CONTROLLER -->
+<div class="product-card">
+<span class="badge">20% OFF</span>
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=500">
+<div class="product-content">
+<h3>Game Controller</h3>
+<div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+<p class="price">₹3499</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Game%20Controller%20₹3499">Order on WhatsApp</a>
+</div>
+</div>
+
+<!-- LAPTOP -->
+<div class="product-card">
+<span class="badge">10% OFF</span>
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500">
+<div class="product-content">
+<h3>Laptop</h3>
+<div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+<p class="price">₹74999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn" href="https://wa.me/918000747574?text=Order%20Laptop%20₹74999">Order on WhatsApp</a>
+</div>
+</div>
+
+<!-- Headphones Pro -->
+<div class="product-card">
+<span class="badge">20% OFF</span>
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+<div class="product-content">
+<h3>Headphones Pro</h3>
+<div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+<p class="price">₹6,499</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn"
+href="https://wa.me/918000747574?text=Order%20Headphones%20Pro%20₹6499">
+Order on WhatsApp
+</a>
+</div>
+</div>
+
+<!-- Digital Camera-->
+<div class="product-card">
+<span class="badge">18% OFF</span>
+<img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500">
+<div class="product-content">
+<h3>Digital Camera</h3>
+<div class="rating">⭐⭐⭐⭐☆ (4.6)</div>
+<p class="price">₹45,999</p>
+<button class="btn">Buy Now</button>
+<button class="cart-btn">Add to Cart</button>
+<a class="whatsapp-btn"
+href="https://wa.me/918000747574?text=Order%20Digital%20Camera%20₹45999">
+Order on WhatsApp
+</a>
+</div>
+</div>
 
 
-<footer>
-<p>© 2026 Keyur Jain</p>
-<p>Email: keyurjain15@icloud.com</p>
-<p>Phone: 8000747574</p>
-</footer>
+</div>
+
 </body>
 </html>
